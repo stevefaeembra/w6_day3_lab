@@ -50,13 +50,14 @@ describe('Cinema', function () {
   it('should be able to check whether there are some films from a particular year', function () {
     const expected = true;
     const actual = cinema.hasFilmsForYear(2017);
-    const notActual = cinema.hasFilmsForYear(2012);
     assert.strictEqual(actual, expected);
-    assert.strictEqual(notActual, true)
   });
 
+  it('should be able to check whether there are no films from a particular year', function () {
+    const actual = cinema.hasFilmsForYear(2012);
+    assert.strictEqual(actual, false);
+  });
 
-  it('should be able to check whether there are no films from a particular year');
   it('should be able to check whether all films are over a particular length');
   it('should be able to calculate total running time of all films');
 
