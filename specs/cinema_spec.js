@@ -77,4 +77,10 @@ describe('Cinema', function () {
     assert.strictEqual(actual, expected);
   });
 
+  it('should allow allow filtering on arbitrary property', function () {
+    const actual = cinema.findAllMatching("title","T2 Trainspotting");
+    const expected = [trainspotting];
+    assert.deepEqual(actual,expected);
+  })
+
 });

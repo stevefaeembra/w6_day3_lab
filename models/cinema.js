@@ -39,4 +39,9 @@ Cinema.prototype.getTotalRunningTime = function () {
   return this.films.reduce(reducer,0)
 };
 
+Cinema.prototype.findAllMatching = function (property_name, property_value) {
+  return this.films.filter((item) => {
+    return item[property_name] === property_value;
+  });
+};
 module.exports = Cinema;
