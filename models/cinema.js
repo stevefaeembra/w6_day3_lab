@@ -26,4 +26,10 @@ Cinema.prototype.hasFilmsForYear= function (year) {
   });
 };
 
+Cinema.prototype.allFilmsLongerThan = function (lengthMinutes) {
+  return this.films.every((film) => {
+    return film.length > lengthMinutes;
+  });
+};
+
 module.exports = Cinema;
