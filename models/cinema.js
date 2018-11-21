@@ -32,4 +32,11 @@ Cinema.prototype.allFilmsLongerThan = function (lengthMinutes) {
   });
 };
 
+Cinema.prototype.getTotalRunningTime = function () {
+  const reducer = (acc, item) => {
+    return acc += item.length
+  }
+  return this.films.reduce(reducer,0)
+};
+
 module.exports = Cinema;
