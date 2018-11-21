@@ -20,4 +20,10 @@ Cinema.prototype.getFilmsByGenre= function (genre) {
   });
 };
 
+Cinema.prototype.hasFilmsForYear= function (year) {
+  return this.films.some((film) => {
+    return film.year === year;
+  });
+};
+
 module.exports = Cinema;
