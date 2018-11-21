@@ -14,4 +14,10 @@ Cinema.prototype.getFilmByTitle = function (filmTitle) {
   });
 };
 
+Cinema.prototype.getFilmsByGenre= function (genre) {
+  return this.films.filter((film) => {
+    return film.genre === genre;
+  });
+};
+
 module.exports = Cinema;
